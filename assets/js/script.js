@@ -16,7 +16,6 @@ dayjs.locale(localSettings);
         $(this).toggleClass('present', blockHour === currentHour);
         $(this).toggleClass('future', blockHour > currentHour);
       });
-    }
   // The function below will save the user's input in a textarea to localStorage only when the save button corresponding to the block is clicked.
     function textEntry() {
       $('.saveBtn').on('click', function() {
@@ -38,4 +37,24 @@ dayjs.locale(localSettings);
           }
         });
       }
-    }
+    // This function will get the input from localStorage and update the block with textarea values
+      $('.time-block').each(function() {
+        const key = $(this).attr('id');
+        const value = localStorage.getItem(key);
+        $(this).children('.description').val(value);
+      });
+
+      function updateTime() {
+        const dateElement = $('#date');
+        const timeElement = $('#time');
+        const currentDate = dayjs().format('dddd, MMMM D, YYYY');
+        const currentTime = dayjs().format('hh:mm:ss A');
+        dateElement.text(currentDate);
+        timeElement.text(currentTime);
+      }
+
+      hourlyColor();
+      textEntry();
+      refreshColor();
+      setInterval(updateTime, 1000);
+    });
