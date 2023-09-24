@@ -8,6 +8,8 @@ This Work Day Scheduler allows users to have an easier time on planning their wo
 - [Overview](#overview)
 - [Usage Instructions](#usage-instructions)
 - [GIF](#gif)
+- [Screenshot](#screenshot)
+- [Link](#link)
 
 # Overview
 
@@ -27,4 +29,4 @@ Heres a GIF on the page!
 ![Work day scheduler](https://github.com/AndresRey01/Work-Day-Scheduler/assets/140764079/24ac1fd5-996a-488e-8d33-49a1a19dac3c)
 
 ## Link
-[Link to the deployed site!:]() 
+[Link to the deployed site!:](https://andresrey01.github.io/Work-Day-Scheduler/) 
